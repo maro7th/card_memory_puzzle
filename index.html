@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Memory Match</h1>
+            <div class="controls">
+                <div class="theme-selector">
+                    <label for="theme">Theme:</label>
+                    <select id="theme">
+                        <option value="animals">Animals 🐶</option>
+                        <option value="fruits">Fruits 🍎</option>
+                        <option value="emoji">Emoji 😀</option>
+                    </select>
+                </div>
+                <button id="restart-btn">Restart Game</button>
+            </div>
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="label">Moves</span>
+                    <span id="moves" class="value">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">Time</span>
+                    <span id="time" class="value">00:00</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <div id="grid" class="grid">
+                <!-- Cards will be generated here -->
+            </div>
+        </div>
+
+        <!-- Hidden by default -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>🎉 Game Over! 🎉</h2>
+                <p>You did it!</p>
+                <div class="final-stats">
+                    <p>Time: <span id="final-time">00:00</span></p>
+                    <p>Moves: <span id="final-moves">0</span></p>
+                </div>
+                <button id="modal-restart">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
